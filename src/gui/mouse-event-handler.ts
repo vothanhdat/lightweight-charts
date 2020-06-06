@@ -541,6 +541,11 @@ function isTouchEvent(event: MouseEvent | TouchEvent): event is TouchEvent {
 
 function preventDefault(event: Event): void {
 	if (event.cancelable) {
+		if (event instanceof TouchEvent) {
+			if (event.type === 'touchend' || event.type === 'touchmove') {
+				return;
+			}
+		}
 		event.preventDefault();
 	}
 }
