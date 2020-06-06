@@ -17,3 +17,5 @@ export const mobileTouch = 'onorientationchange' in window && touch;
 const android = /Android/i.test(navigator.userAgent);
 const iOS = /iPhone|iPad|iPod|AppleWebKit.+Mobile/i.test(navigator.userAgent);
 export const isMobile = android || iOS;
+export const isAndroid = android;
+export const isIos = iOS;

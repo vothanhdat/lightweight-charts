@@ -1,7 +1,7 @@
 import { ensure } from '../helpers/assertions';
 import { IDestroyable } from '../helpers/idestroyable';
 
-import { mobileTouch } from './support-touch';
+import { isAndroid , mobileTouch } from './support-touch';
 
 export type HandlerEventCallback = (event: TouchMouseEvent) => void;
 export type EmptyCallback = () => void;
@@ -543,7 +543,9 @@ function preventDefault(event: Event): void {
 	if (event.cancelable) {
 		if (event instanceof TouchEvent) {
 			if (event.type === 'touchend' || event.type === 'touchmove') {
-				return;
+				if (isAndroid) {
+					return;
+				}
 			}
 		}
 		event.preventDefault();
