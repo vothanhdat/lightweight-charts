@@ -1,7 +1,7 @@
 {
   "private": true,
   "version": "2.0.0",
-  "name": "lightweight-charts",
+  "name": "@resfinex/lightweight-charts",
   "author": "TradingView, Inc.",
   "license": "Apache-2.0",
   "description": "Financial lightweight charts built with HTML5 canvas",
