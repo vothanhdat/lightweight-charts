@@ -33,3 +33,5 @@ export class PriceScaleApi implements IPriceScaleApi, IDestroyable {
 		return this._chartModel.mainPriceScale();
 	}
 }
+
+export { PriceScale };
