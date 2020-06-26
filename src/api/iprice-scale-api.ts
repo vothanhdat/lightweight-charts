@@ -1,6 +1,6 @@
 import { DeepPartial } from '../helpers/strict-type-checks';
 
-import { PriceScaleOptions } from '../model/price-scale';
+import { PriceScale, PriceScaleOptions } from '../model/price-scale';
 
 /** Interface to control chart's price scale */
 export interface IPriceScaleApi {
@@ -15,4 +15,6 @@ export interface IPriceScaleApi {
 	 * @returns full set of currently applied options, including defaults
 	 */
 	options(): Readonly<PriceScaleOptions>;
+
+	priceScale(): PriceScale;
 }
