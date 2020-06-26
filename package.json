@@ -1,7 +1,6 @@
 {
-  "private": true,
-  "version": "3.0.1",
-  "name": "lightweight-charts",
+  "version": "3.0.5",
+  "name": "resfinex-lightweight-charts",
   "author": "TradingView, Inc.",
   "license": "Apache-2.0",
   "description": "Financial lightweight charts built with HTML5 canvas",
@@ -12,7 +11,7 @@
     "type": "git",
     "url": "https://github.com/tradingview/lightweight-charts.git"
   },
-  "module": "dist/lightweight-charts.esm.production.js",
+  "module": "dist/lightweight-charts.esm.development.js",
   "main": "index.js",
   "typings": "dist/typings.d.ts",
   "files": [
