@@ -111,7 +111,12 @@ type PriceTransformer = (price: BarPrice, baseValue: number) => number;
 const percentageFormatter = new PercentageFormatter();
 const defaultPriceFormatter = new PriceFormatter(100, 1);
 
-export class PriceScale {
+export interface PriceScaleInterface {
+	priceRange(): PriceRangeImpl | null;
+	priceRangeChanged(): ISubscription<PriceRangeImpl | null, PriceRangeImpl | null>;
+}
+
+export class PriceScale implements PriceScaleInterface {
 	private readonly _id: string;
 
 	private readonly _layoutOptions: LayoutOptions;
