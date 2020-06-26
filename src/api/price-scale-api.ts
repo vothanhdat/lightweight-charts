@@ -18,7 +18,7 @@ export class PriceScaleApi implements IPriceScaleApi, IDestroyable {
 	}
 
 	public priceScale(): PriceScale {
-		return this._chartModel.mainPriceScale()
+		return this._chartModel.mainPriceScale();
 	}
 
 	public applyOptions(options: DeepPartial<PriceScaleOptions>): void {
